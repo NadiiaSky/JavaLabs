@@ -1,4 +1,6 @@
-package ua.procamp;
+package ua.procamp.lab4;
+
+import ua.procamp.exception.FileStatsException;
 
 import java.io.IOException;
 import java.net.URISyntaxException;

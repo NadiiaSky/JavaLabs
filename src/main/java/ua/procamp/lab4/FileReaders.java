@@ -1,4 +1,4 @@
-package ua.procamp;
+package ua.procamp.lab4;
 
 import ua.procamp.exception.FileReaderException;
 
@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 /**
  * {@link FileReaders} privides an API that allow to read whole file into a {@link String} by file name.
  */
-public class FileReaders {
+class FileReaders {
     /**
      * Returns a {@link String} that contains whole text from the file specified by name.
      *
