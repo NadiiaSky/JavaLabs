@@ -1,4 +1,4 @@
-package ua.procamp;
+package ua.procamp.lab3;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

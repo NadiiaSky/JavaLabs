@@ -1,10 +1,10 @@
-package ua.procamp;
+package ua.procamp.lab3;
 
 import java.math.BigDecimal;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.function.*;
 
-public class CrazyLambdas {
+class CrazyLambdas {
 
     /**
      * Returns {@link Supplier} that always supply "Hello"
@@ -12,7 +12,7 @@ public class CrazyLambdas {
      * @return a string supplier
      */
     public static Supplier<String> helloSupplier() {
-        return () -> "Hello"; // todo
+        return () -> "Hello";
     }
 
     /**
@@ -21,7 +21,7 @@ public class CrazyLambdas {
      * @return a string predicate
      */
     public static Predicate<String> isEmptyPredicate() {
-        return String::isEmpty; // todo
+        return String::isEmpty;
     }
 
     /**
@@ -31,7 +31,7 @@ public class CrazyLambdas {
      * @return function that converts adds dollar sign
      */
     public static Function<BigDecimal, String> toDollarStringFunction() {
-        return bigDecimal -> "$" + bigDecimal; // todo
+        return bigDecimal -> "$" + bigDecimal;
     }
 
     /**
@@ -43,7 +43,7 @@ public class CrazyLambdas {
      * @return a string predicate
      */
     public static Predicate<String> lengthInRangePredicate(int min, int max) {
-        return str -> str.length() >= min && str.length() < max; // todo
+        return str -> str.length() >= min && str.length() < max;
     }
 
     /**
@@ -52,7 +52,7 @@ public class CrazyLambdas {
      * @return int supplier
      */
     public static IntSupplier randomIntSupplier() {
-        return() -> ThreadLocalRandom.current().nextInt(); // todo
+        return() -> ThreadLocalRandom.current().nextInt();
     }
 
 
@@ -62,7 +62,7 @@ public class CrazyLambdas {
      * @return int operation
      */
     public static IntUnaryOperator boundedRandomIntSupplier() {
-        return bound -> ThreadLocalRandom.current().nextInt(bound); // todo
+        return bound -> ThreadLocalRandom.current().nextInt(bound);
     }
 
     /**
@@ -71,7 +71,7 @@ public class CrazyLambdas {
      * @return square operation
      */
     public static IntUnaryOperator intSquareOperation() {
-        return a -> a*a; // todo
+        return a -> a*a;
     }
 
     /**
@@ -80,7 +80,7 @@ public class CrazyLambdas {
      * @return binary sum operation
      */
     public static LongBinaryOperator longSumOperation() {
-        return(a, b) -> a + b ; // todo
+        return(a, b) -> a + b ;
     }
 
     /**
@@ -89,7 +89,7 @@ public class CrazyLambdas {
      * @return string to int converter
      */
     public static ToIntFunction<String> stringToIntConverter() {
-        return Integer::parseInt; // todo
+        return Integer::parseInt;
     }
 
     /**
@@ -100,7 +100,7 @@ public class CrazyLambdas {
      * @return a function supplier
      */
     public static Supplier<IntUnaryOperator> nMultiplyFunctionSupplier(int n) {
-        return() -> x -> n*x; // todo
+        return() -> x -> n*x;
     }
 
     /**
@@ -115,7 +115,7 @@ public class CrazyLambdas {
             Thread thread = new Thread(runnable);
             thread.start();
             return  thread;
-        } ; // todo
+        } ;
     }
 
     /**
@@ -124,7 +124,7 @@ public class CrazyLambdas {
      * @return a runnable consumer
      */
     public static Consumer<Runnable> newThreadRunnableConsumer() {
-        return runnable -> new Thread(runnable).start(); // todo
+        return runnable -> new Thread(runnable).start();
     }
 
     /**
@@ -138,7 +138,7 @@ public class CrazyLambdas {
             Thread thread = new Thread(runnable);
             thread.start();
             return thread;
-        }; // todo
+        };
     }
 
     /**
@@ -151,7 +151,7 @@ public class CrazyLambdas {
      * @return a binary function that receiver predicate and function and compose them to create a new function
      */
     public static BiFunction<IntUnaryOperator, IntPredicate, IntUnaryOperator> functionToConditionalFunction() {
-        return (intOperation, intPredicate) -> a -> intPredicate.test(a) ? intOperation.applyAsInt(a) : a; // todo
+        return (intOperation, intPredicate) -> a -> intPredicate.test(a) ? intOperation.applyAsInt(a) : a;
     }
 
     /**
@@ -160,7 +160,7 @@ public class CrazyLambdas {
      * @return a supplier instance
      */
     public static Supplier<Supplier<Supplier<String>>> trickyWellDoneSupplier() {
-        return() -> () -> () -> "WELL DONE!"; // todo
+        return() -> () -> () -> "WELL DONE!";
     }
 
 }

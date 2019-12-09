@@ -1,4 +1,4 @@
-package ua.procamp;
+package ua.procamp.exception;
 
 public class FileStatsException extends RuntimeException {
     public FileStatsException(String message) {
